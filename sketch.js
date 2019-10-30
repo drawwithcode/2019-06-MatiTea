@@ -68,7 +68,7 @@ function Popup(_width, _height, _x, _y, _title, _text) {
 
         changePositionTimeout = setTimeout(function() {
           popup.position(p.random() * (p.windowWidth - _this.width), p.random() * (p.windowHeight - _this.height));
-        }, 250);
+        }, 200);
       })
       
       // create body paragraph
