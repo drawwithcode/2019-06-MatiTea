@@ -3,11 +3,100 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0>
-    <style> body {padding: 0; margin: 0;} </style>
+    <title>DOM Animation</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+
     <script src="p5.min.js"></script>
-    <!-- <script src="addons/p5.sound.min.js"></script> -->
+    <script src="p5.sound.min.js"></script>
+    <script src="p5.dom.min.js"></script>
     <script src="sketch.js"></script>
+
+    <style>
+      body {
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+        font-family: sans-serif;
+      }
+
+      .popup {
+        border: 1px solid #0250e8;
+        border-radius: 6px 6px 0 0;
+        width: 420px;
+      }
+      .popup.hidden {
+        display: none;
+      }
+
+      .popup .nav {
+        background: #0250e8;
+        box-shadow: inset 0 4px 0 0 #0266ff, inset 0 -13px 0 0 #054fbd;
+        border-radius: 5px 5px 0 0;
+        line-height: 36px;
+        padding: 0 10px;
+        color: white;
+        font-family: 'Lato';
+      }
+
+      .popup .body {
+        background: #BBB;
+        padding: 60px 48px;
+        border: 3px solid #0250e8;
+        text-align: center;
+        font-size: 28px;
+      }
+
+      .popup .body p {
+        margin-top: 0;
+      }
+
+      .popup .body button {
+        padding: 10px 20px;
+        font-size: 18px;
+        font-family: 'Lato';
+      }
+
+      #desktop .sfondo {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('assets/desktop.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+      #desktop .cane {
+        position: absolute;
+        bottom: -100%;
+        background-image: url(assets/dog.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 20%;
+        height: 400px;
+      }
+
+      #desktop .collina {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('assets/collina.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    </style>
   </head>
   <body>
+    <div id="desktop">
+      <div class="sfondo"></div>
+      <div class="cane"></div>
+      <div class="collina"></div>
+    </div>
   </body>
 </html>
