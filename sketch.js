@@ -88,7 +88,7 @@ function Popup(_width, _height, _x, _y, _title, _text) {
 
         clearTimeout(changePositionTimeout);
 
-        // show popup again after 2/4 sec
+        // show popup again after 4/9 sec
         setTimeout(function() {
           soundError.play();
 
@@ -96,7 +96,7 @@ function Popup(_width, _height, _x, _y, _title, _text) {
           popup.removeClass("hidden");
           
           dogActive = false;
-        }, 2000 + (3 * p.random() * 1000));
+        }, 4000 + (6000 * p.random()));
       })
 
       dogActive = false;
