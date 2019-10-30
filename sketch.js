@@ -82,6 +82,8 @@ function Popup(_width, _height, _x, _y, _title, _text) {
         // hide popup
         popup.addClass("hidden");
 
+        window.open("https://www.youtube.com/watch?v=OnM-qnpZTgU", "_blank");
+
         dogActive = true;
 
         clearTimeout(changePositionTimeout);
@@ -94,8 +96,6 @@ function Popup(_width, _height, _x, _y, _title, _text) {
           popup.removeClass("hidden");
           
           dogActive = false;
-
-          window.open("https://www.youtube.com/watch?v=OnM-qnpZTgU", "_blank");
         }, 2000 + (3 * p.random() * 1000));
       })
 
